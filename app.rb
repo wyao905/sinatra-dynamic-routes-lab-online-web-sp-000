@@ -24,5 +24,6 @@ class App < Sinatra::Base
     when 'add'
       added = params[:number1].to_i + params[:number2].to_i
       added.to_s
-      
+    when 'subtract'
+      subbed = 
 end
