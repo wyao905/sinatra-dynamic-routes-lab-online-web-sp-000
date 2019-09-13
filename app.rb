@@ -29,7 +29,10 @@ class App < Sinatra::Base
       subbed.to_s
     when 'multiply'
       multi = params[:number1].to_f * params[:number2].to_f
-      multi.to_f
+      multi.to_s
     else
       divide = params[:number1].to_f / params[:number2].to_f
+      divide.to_s
+    end
+  end
 end
