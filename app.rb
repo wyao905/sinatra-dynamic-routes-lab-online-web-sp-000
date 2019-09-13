@@ -22,8 +22,14 @@ class App < Sinatra::Base
   get '/:operation/:number1/:number2' do
     case params[:operation]
     when 'add'
-      added = params[:number1].to_i + params[:number2].to_i
+      added = params[:number1].to_f + params[:number2].to_f
       added.to_s
     when 'subtract'
-      subbed = 
+      subbed = params[:number1].to_f - params[:number2].to_f
+      subbed.to_s
+    when 'multiply'
+      multi = params[:number1].to_f * params[:number2].to_f
+      multi.to_f
+    else
+      divide = params[:number1].to_f / params[:number2].to_f
 end
